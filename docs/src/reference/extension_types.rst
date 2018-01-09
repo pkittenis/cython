@@ -238,7 +238,9 @@ Initialization: ``__cinit__()`` and ``__init__()``
 Note that all constructor arguments will be passed as Python objects.
 This implies that non-convertible C types such as pointers or C++ objects
 cannot be passed into the constructor from Cython code.  If this is needed,
-use a factory function instead that handles the object initialisation.
+use a factory function instead that handles the object initialisation - see
+:ref:`existing-pointers-instanciation` for an example.
+
 It often helps to directly call ``__new__()`` in this function to bypass the
 call to the ``__init__()`` constructor.
 
